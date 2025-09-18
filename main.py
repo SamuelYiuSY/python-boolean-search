@@ -1,10 +1,5 @@
 def boolean_search(string_to_search, AND_list = None, OR_list = None, NOT_list = None):
-    if AND_list:
-        for eachWord in AND_list:
-            if eachWord not in string_to_search:
-                # print("AND statement not satisified")
-                return False
-    
+    # check OR and NOT list first as they may return before going through the whole string
     if OR_list:
         have_1_OR_word_flag = False
         for eachWord in OR_list:
